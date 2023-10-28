@@ -1,0 +1,21 @@
+{{form(f)}}
+
+<table border="2">
+    <tr>
+        
+        <td>username</td>
+        <td>email</td>
+        <td>Number of books</td>
+        <td>action</td>
+    </tr>
+    {% for i in author %} 
+    <tr>
+       
+        <td>{{ i.username }}</td>
+        <td>{{ i.email }}</td>
+        <td>{{ i.nbrbook }}</td>
+        <td><a href="{{ path('Editauthor',{'id':i.id}) }}">modifier</a></td>
+        <td><a href="{{ path('Deleteauthor',{'id':i.id}) }}">delete</a></td>
+    </tr>
+    {% endfor %}
+</table>

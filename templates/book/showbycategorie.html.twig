@@ -1,0 +1,39 @@
+
+
+
+
+
+
+
+<table border="2">
+    <tr>
+        <td>id</td>
+        <td>tittle</td>
+        <td>publicationdate</td>
+        <td>publiched</td>
+        <td>category</td>
+        <td>author</td>
+        <td>action</td>
+    </tr>
+    {% for i in b %} 
+    <tr>
+        <td>{{ i.id }}</td> 
+        <td>{{ i.tittle }}</td>
+        <td>{{ i.publicationdate|date }}</td>
+       
+        <td>{{i.publiched}}</td>
+        <td>{{i.category}}</td>
+        <td>{{i.author.username}}</td>
+        <td><a href="{{ path('editbook',{'id':i.id}) }}">modifier</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+
+
+
+
+</table>
+Nombre total de livres : {{ b|length }}

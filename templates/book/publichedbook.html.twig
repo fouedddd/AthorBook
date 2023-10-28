@@ -1,0 +1,18 @@
+
+<table >
+
+    {% for i in b %} 
+    <tr>
+       
+        
+        <td>{{ i.tittle }}</td>
+        <td>{{ i.publicationdate|date }}</td>
+       
+        
+       
+        <td>{{i.author.username}}</td>
+       
+        
+    </tr>
+    {% endfor %}
+</table>
